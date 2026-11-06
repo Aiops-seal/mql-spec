@@ -1,0 +1,16 @@
+{
+  "mql": {
+    "mql_version": "1.1",
+    "metrics": [
+      {
+        "name": "gmv"
+      }
+    ],
+    "time_range": {
+      "start": "last_week",
+      "end": "today"
+    }
+  },
+  "expect": "BAD_VALUE",
+  "note": "时间写成 last_week —— 相对时间只接受固定几种写法"
+}

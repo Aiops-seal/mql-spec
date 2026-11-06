@@ -1,0 +1,36 @@
+{
+  "_comment": "零售「门店经营」样板本体。只用于跑通用例，不代表完整业务模型。",
+  "metrics": [
+    "gmv",
+    "order_gmv",
+    "consume_gmv",
+    "net_gmv",
+    "order_count",
+    "avg_order_amount",
+    "refund_amount",
+    "user_cnt",
+    "new_user_cnt",
+    "same_store_gmv"
+  ],
+  "dimensions": [
+    "order_date",
+    "city",
+    "store",
+    "region",
+    "store_type",
+    "channel",
+    "category"
+  ],
+  "filter_fields": [
+    "order_date",
+    "city",
+    "store",
+    "region",
+    "store_type",
+    "channel",
+    "category"
+  ],
+  "time_properties": [
+    "order_date"
+  ]
+}

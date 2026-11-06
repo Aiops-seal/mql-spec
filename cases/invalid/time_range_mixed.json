@@ -1,0 +1,16 @@
+{
+  "mql": {
+    "mql_version": "1.1",
+    "metrics": [
+      {
+        "name": "gmv"
+      }
+    ],
+    "time_range": {
+      "start": "-7d",
+      "end": "2026-11-01"
+    }
+  },
+  "expect": "BAD_VALUE",
+  "note": "start 用相对 -7d，end 用绝对日期 —— 两种写法不得混用，混用会让基准时间不确定"
+}

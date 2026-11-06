@@ -1,0 +1,7 @@
+{
+  "mql": {
+    "mql_version": "1.1"
+  },
+  "expect": "MQL_SHAPE",
+  "note": "没有 metrics 字段 —— 没有指标的请求不是指标查询，必须直接拒绝而不是当成空查询"
+}

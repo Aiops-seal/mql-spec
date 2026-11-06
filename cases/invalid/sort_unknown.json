@@ -1,0 +1,18 @@
+{
+  "mql": {
+    "mql_version": "1.1",
+    "metrics": [
+      {
+        "name": "gmv"
+      }
+    ],
+    "sort": [
+      {
+        "field": "not_selected",
+        "order": "desc"
+      }
+    ]
+  },
+  "expect": "UNKNOWN_PROPERTY",
+  "note": "sort 引用了本次查询里没出现的字段 —— 排序字段必须先出现在 metrics 或 dimensions 中"
+}

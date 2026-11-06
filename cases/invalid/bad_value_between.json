@@ -1,0 +1,23 @@
+{
+  "mql": {
+    "mql_version": "1.1",
+    "metrics": [
+      {
+        "name": "gmv"
+      }
+    ],
+    "filters": [
+      {
+        "field": "order_date",
+        "operator": "between",
+        "value": [
+          "2026-01-01",
+          "2026-02-01",
+          "2026-03-01"
+        ]
+      }
+    ]
+  },
+  "expect": "BAD_VALUE",
+  "note": "between 的 value 给了 3 个元素 —— 区间必须是两端"
+}

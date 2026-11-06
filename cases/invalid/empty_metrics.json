@@ -1,0 +1,8 @@
+{
+  "mql": {
+    "mql_version": "1.1",
+    "metrics": []
+  },
+  "expect": "MQL_SHAPE",
+  "note": "metrics 是空数组 —— 空 metrics 和缺失等价"
+}

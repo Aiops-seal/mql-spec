@@ -1,0 +1,19 @@
+{
+  "mql": {
+    "mql_version": "1.1",
+    "metrics": [
+      {
+        "name": "gmv"
+      }
+    ],
+    "filters": [
+      {
+        "field": "channel",
+        "operator": "in",
+        "value": "堂食"
+      }
+    ]
+  },
+  "expect": "BAD_VALUE",
+  "note": "in 的 value 给了标量而不是数组 —— value 形状必须和 operator 匹配，否则编译器只能猜"
+}

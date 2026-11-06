@@ -1,0 +1,13 @@
+{
+  "mql": {
+    "mql_version": "1.1",
+    "metrics": [
+      {
+        "name": "gmv"
+      }
+    ],
+    "compare": "yoy"
+  },
+  "expect": "MQL_SHAPE",
+  "note": "compare 写成了字符串 \"yoy\" 而不是对象 —— 这正是上游能静默通过的那个写法：compare 不是它 schema 里的字段，于是被当成未知键忽略，SQL 照出，同比没有。本规范不允许这种模糊地带"
+}

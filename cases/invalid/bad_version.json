@@ -1,0 +1,12 @@
+{
+  "mql": {
+    "mql_version": "1.0",
+    "metrics": [
+      {
+        "name": "gmv"
+      }
+    ]
+  },
+  "expect": "UNSUPPORTED_VERSION",
+  "note": "mql_version 写成 1.0 —— 上游版本字段集合不同，不能默默接受"
+}

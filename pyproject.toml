@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mql-spec"
+version = "1.1.0"
+description = "MQL v1.1 — a tiny declarative query language for metrics, with a reference validator"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = ["mql", "metrics", "semantic-layer", "text-to-sql", "llm"]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+mql-spec = "mql_spec.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["mql_spec*"]
+
+[tool.setuptools.package-data]
+mql_spec = ["../schema/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

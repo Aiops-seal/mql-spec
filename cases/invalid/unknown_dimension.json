@@ -1,0 +1,17 @@
+{
+  "mql": {
+    "mql_version": "1.1",
+    "metrics": [
+      {
+        "name": "gmv"
+      }
+    ],
+    "dimensions": [
+      {
+        "name": "poi"
+      }
+    ]
+  },
+  "expect": "UNKNOWN_PROPERTY",
+  "note": "维度写黑话 poi —— poi 本该在上游被归一化成 store，走到这里说明归一化漏了"
+}

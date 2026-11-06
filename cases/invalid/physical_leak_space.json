@@ -1,0 +1,12 @@
+{
+  "mql": {
+    "mql_version": "1.1",
+    "metrics": [
+      {
+        "name": "total amount"
+      }
+    ]
+  },
+  "expect": "PHYSICAL_LEAK",
+  "note": "指标名写成 total amount —— 带空白的自然语言式子，不是注册名"
+}

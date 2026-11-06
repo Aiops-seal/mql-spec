@@ -1,0 +1,51 @@
+{
+  "mql_version": "1.1",
+  "metrics": [
+    {
+      "name": "gmv",
+      "version": "v1.0",
+      "alias": "成交额"
+    },
+    {
+      "name": "net_gmv"
+    }
+  ],
+  "dimensions": [
+    {
+      "name": "city"
+    },
+    {
+      "name": "order_date",
+      "granularity": "month"
+    }
+  ],
+  "filters": [
+    {
+      "field": "channel",
+      "operator": "in",
+      "value": [
+        "堂食",
+        "外卖"
+      ]
+    },
+    {
+      "field": "category",
+      "operator": "like",
+      "value": "数码%"
+    }
+  ],
+  "time_range": {
+    "start": "-3m",
+    "end": "yesterday"
+  },
+  "compare": {
+    "type": "yoy"
+  },
+  "sort": [
+    {
+      "field": "gmv",
+      "order": "desc"
+    }
+  ],
+  "limit": 20
+}

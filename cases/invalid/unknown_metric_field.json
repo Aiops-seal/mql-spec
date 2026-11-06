@@ -1,0 +1,13 @@
+{
+  "mql": {
+    "mql_version": "1.1",
+    "metrics": [
+      {
+        "name": "gmv",
+        "agg": "sum"
+      }
+    ]
+  },
+  "expect": "UNKNOWN_FIELD",
+  "note": "metric 对象里多一个 agg 字段 —— 模型很爱自己发明子字段来表达聚合方式，这类错误必须当场拦住"
+}

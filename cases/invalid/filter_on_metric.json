@@ -1,0 +1,19 @@
+{
+  "mql": {
+    "mql_version": "1.1",
+    "metrics": [
+      {
+        "name": "gmv"
+      }
+    ],
+    "filters": [
+      {
+        "field": "gmv",
+        "operator": "gt",
+        "value": 100
+      }
+    ]
+  },
+  "expect": "UNKNOWN_PROPERTY",
+  "note": "把指标 gmv 当成过滤字段 —— 指标不是属性，不能当过滤条件"
+}

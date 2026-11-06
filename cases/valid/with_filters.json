@@ -1,0 +1,28 @@
+{
+  "mql_version": "1.1",
+  "metrics": [
+    {
+      "name": "gmv"
+    }
+  ],
+  "filters": [
+    {
+      "field": "region",
+      "operator": "eq",
+      "value": "华东"
+    },
+    {
+      "field": "store_type",
+      "operator": "in",
+      "value": [
+        "直营",
+        "加盟"
+      ]
+    },
+    {
+      "field": "category",
+      "operator": "neq",
+      "value": "其他"
+    }
+  ]
+}

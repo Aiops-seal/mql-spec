@@ -1,0 +1,18 @@
+{
+  "mql": {
+    "mql_version": "1.1",
+    "metrics": [
+      {
+        "name": "gmv"
+      }
+    ],
+    "dimensions": [
+      {
+        "name": "city",
+        "granularity": "month"
+      }
+    ]
+  },
+  "expect": "NOT_TIME_DIMENSION",
+  "note": "给 city 挂了 granularity=month —— 上游只校验 granularity 是不是五个合法值之一，不校验维度是不是时间类型，所以这个组合能通过校验，到下游才炸，或者静默丢粒度"
+}

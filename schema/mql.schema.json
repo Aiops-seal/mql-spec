@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/mql-spec/1.1/mql.schema.json",
+  "title": "MQL v1.1",
+  "description": "Metrics Query Language v1.1. MQL = Metrics Query Language. Unrelated to MongoDB Query Language.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["mql_version", "metrics"],
+  "properties": {
+    "mql_version": {
+      "type": "string",
+      "const": "1.1"
+    },
+    "metrics": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name"],
+        "properties": {
+          "name":    { "type": "string", "minLength": 1 },
+          "version": { "type": "string" },
+          "alias":   { "type": "string" }
+        }
+      }
+    },
+    "dimensions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "granularity": {
+            "enum": ["day", "week", "month", "quarter", "year"]
+          }
+        }
+      }
+    },
+    "filters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["field", "operator", "value"],
+        "properties": {
+          "field": { "type": "string", "minLength": 1 },
+          "operator": {
+            "enum": ["eq", "neq", "gt", "gte", "lt", "lte", "in", "not_in", "like", "between"]
+          },
+          "value": {
+            "oneOf": [
+              { "type": "string" },
+              { "type": "number" },
+              { "type": "boolean" },
+              { "type": "array" }
+            ]
+          }
+        }
+      }
+    },
+    "time_range": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "start": { "type": "string", "minLength": 1 },
+        "end":   { "type": "string", "minLength": 1 }
+      }
+    },
+    "compare": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type"],
+      "properties": {
+        "type":   { "enum": ["yoy", "mom", "wow"] },
+        "offset": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "sort": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["field", "order"],
+        "properties": {
+          "field": { "type": "string", "minLength": 1 },
+          "order": { "enum": ["asc", "desc"] }
+        }
+      }
+    },
+    "limit": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10000
+    }
+  }
+}

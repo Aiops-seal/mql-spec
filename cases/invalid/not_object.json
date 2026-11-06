@@ -1,0 +1,5 @@
+{
+  "mql": "this is not an object",
+  "expect": "MQL_SHAPE",
+  "note": "整个请求是个字符串 —— 不是 JSON 对象"
+}

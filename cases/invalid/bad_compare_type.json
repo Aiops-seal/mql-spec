@@ -1,0 +1,19 @@
+{
+  "mql": {
+    "mql_version": "1.1",
+    "metrics": [
+      {
+        "name": "gmv"
+      }
+    ],
+    "time_range": {
+      "start": "-1m",
+      "end": "yesterday"
+    },
+    "compare": {
+      "type": "yoy_year"
+    }
+  },
+  "expect": "BAD_COMPARE",
+  "note": "compare.type 写成 yoy_year —— 对比类型必须枚举"
+}

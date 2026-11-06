@@ -1,0 +1,19 @@
+{
+  "mql": {
+    "mql_version": "1.1",
+    "metrics": [
+      {
+        "name": "gmv"
+      }
+    ],
+    "filters": [
+      {
+        "field": "region",
+        "operator": "!=",
+        "value": "华东"
+      }
+    ]
+  },
+  "expect": "BAD_OPERATOR",
+  "note": "operator 写成 \"!=\" —— 同上"
+}

@@ -1,0 +1,12 @@
+{
+  "mql": {
+    "mql_version": "1.1",
+    "metrics": [
+      {
+        "name": "not_exist_metric"
+      }
+    ]
+  },
+  "expect": "UNKNOWN_METRIC",
+  "note": "指标名 not_exist_metric —— 应带候选让上游能重试"
+}

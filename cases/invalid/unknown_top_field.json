@@ -1,0 +1,13 @@
+{
+  "mql": {
+    "mql_version": "1.1",
+    "metrics": [
+      {
+        "name": "gmv"
+      }
+    ],
+    "compare_type": "yoy"
+  },
+  "expect": "UNKNOWN_FIELD",
+  "note": "顶层多一个 compare_type 字段 —— 严格模式的核心：不认识的字段必须报错。上游实现会静默忽略它，结果就是「用户以为要了同比、实际没要」，而且不报错"
+}

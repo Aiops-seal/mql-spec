@@ -1,0 +1,18 @@
+{
+  "mql": {
+    "mql_version": "1.1",
+    "metrics": [
+      {
+        "name": "gmv"
+      }
+    ],
+    "dimensions": [
+      {
+        "name": "order_date",
+        "granularity": "M"
+      }
+    ]
+  },
+  "expect": "BAD_GRANULARITY",
+  "note": "granularity 写成 \"M\" —— 大小写简写不统一，必须用全称枚举"
+}

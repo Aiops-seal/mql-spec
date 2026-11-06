@@ -1,0 +1,18 @@
+{
+  "mql_version": "1.1",
+  "metrics": [
+    {
+      "name": "same_store_gmv",
+      "alias": "同店增长基数"
+    }
+  ],
+  "dimensions": [
+    {
+      "name": "order_date",
+      "granularity": "month"
+    }
+  ],
+  "compare": {
+    "type": "yoy"
+  }
+}
